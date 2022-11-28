@@ -32,51 +32,18 @@ def write_rxlev(workbook):
     worksheet.write(0,5,'Vector')
     worksheet.write(0,6,'Samples')
 
-
-    for key, value_list in rxlev_data.items():
-        #print(f'Values for the Item {key} are:')
+    j=0 #Set the column number
+    for key, value_list in rxlev_data.items(): #This loop go through every key and the value_list
+        #print(key,value_list)
         start = 1
-        if key == 'Date':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,0,item)
-                start+=1
-
-        if key == 'Cell':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,1,item)
-                start+=1
-
-        if key == 'CHGR':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,2,int(item))
-                start+=1
-                
-        if key == 'RXLEV':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,3,item)
-                start+=1
-
-        if key == 'DL/UL':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,4,item)
-                start+=1
-
-        if key == 'Vector':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,5,int(item))
-                start+=1
-
-        if key == 'Samples':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,6,int(item))
-                start+=1
+        for item in value_list: #This loop go through every items in value_list
+            #print(item)
+            if j==2 or j>4:
+                worksheet.write(start,j,int(item))
+            else:
+                worksheet.write(start,j,item)
+            start +=1
+        j+=1   
 
 def write_rxqual(workbook):
     worksheet = workbook.add_worksheet('RXQUAL')
@@ -89,51 +56,18 @@ def write_rxqual(workbook):
     worksheet.write(0,5,'Vector')
     worksheet.write(0,6,'Samples')
 
-
-    for key, value_list in rxqual_data.items():
-        #print(f'Values for the Item {key} are:')
+    j=0 #Set the column number
+    for key, value_list in rxqual_data.items(): #This loop go through every key and the value_list
+        #print(key,value_list)
         start = 1
-        if key == 'Date':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,0,item)
-                start+=1
-
-        if key == 'Cell':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,1,item)
-                start+=1
-
-        if key == 'CHGR':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,2,int(item))
-                start+=1
-                
-        if key == 'RXQUAL':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,3,item)
-                start+=1
-
-        if key == 'DL/UL':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,4,item)
-                start+=1
-
-        if key == 'Vector':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,5,int(item))
-                start+=1
-
-        if key == 'Samples':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,6,int(item))
-                start+=1
+        for item in value_list: #This loop go through every items in value_list
+            #print(item)
+            if j==2 or j>4:
+                worksheet.write(start,j,int(item))
+            else:
+                worksheet.write(start,j,item)
+            start +=1
+        j+=1
 
 def write_ta(workbook):
     worksheet = workbook.add_worksheet('TAVAL')
@@ -146,45 +80,18 @@ def write_ta(workbook):
     worksheet.write(0,4,'Vector')
     worksheet.write(0,5,'Samples')
 
-
-    for key, value_list in ta_data.items():
-        #print(f'Values for the Item {key} are:')
+    j=0 #Set the column number
+    for key, value_list in ta_data.items(): #This loop go through every key and the value_list
+        #print(key,value_list)
         start = 1
-        if key == 'Date':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,0,item)
-                start+=1
-
-        if key == 'Cell':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,1,item)
-                start+=1
-
-        if key == 'CHGR':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,2,int(item))
-                start+=1
-                
-        if key == 'TAVAL':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,3,item)
-                start+=1
-
-        if key == 'Vector':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,4,int(item))
-                start+=1
-
-        if key == 'Samples':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,5,int(item))
-                start+=1
+        for item in value_list: #This loop go through every items in value_list
+            #print(item)
+            if j==2 or j>3:
+                worksheet.write(start,j,int(item))
+            else:
+                worksheet.write(start,j,item)
+            start +=1
+        j+=1
 
 def write_msbspwr(workbook):
     worksheet = workbook.add_worksheet('MSBSPWR')
@@ -197,51 +104,18 @@ def write_msbspwr(workbook):
     worksheet.write(0,5,'Vector')
     worksheet.write(0,6,'Samples')
 
-
-    for key, value_list in msbspwr_data.items():
-        #print(f'Values for the Item {key} are:')
+    j=0 #Set the column number
+    for key, value_list in msbspwr_data.items(): #This loop go through every key and the value_list
+        #print(key,value_list)
         start = 1
-        if key == 'Date':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,0,item)
-                start+=1
-
-        if key == 'Cell':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,1,item)
-                start+=1
-
-        if key == 'CHGR':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,2,int(item))
-                start+=1
-                
-        if key == 'MSBSPWR':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,3,item)
-                start+=1
-
-        if key == 'MS/BS':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,4,item)
-                start+=1
-
-        if key == 'Vector':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,5,int(item))
-                start+=1
-
-        if key == 'Samples':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,6,int(item))
-                start+=1
+        for item in value_list: #This loop go through every items in value_list
+            #print(item)
+            if j==2 or j>4:
+                worksheet.write(start,j,int(item))
+            else:
+                worksheet.write(start,j,item)
+            start +=1
+        j+=1
 
 def write_ploss(workbook):
     worksheet = workbook.add_worksheet('PLOSS')
@@ -254,51 +128,18 @@ def write_ploss(workbook):
     worksheet.write(0,5,'Vector')
     worksheet.write(0,6,'Samples')
 
-
-    for key, value_list in ploss_data.items():
-        #print(f'Values for the Item {key} are:')
+    j=0 #Set the column number
+    for key, value_list in ploss_data.items(): #This loop go through every key and the value_list
+        #print(key,value_list)
         start = 1
-        if key == 'Date':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,0,item)
-                start+=1
-
-        if key == 'Cell':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,1,item)
-                start+=1
-
-        if key == 'CHGR':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,2,int(item))
-                start+=1
-                
-        if key == 'PLOSS':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,3,item)
-                start+=1
-
-        if key == 'DL/UL':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,4,item)
-                start+=1
-
-        if key == 'Vector':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,5,int(item))
-                start+=1
-
-        if key == 'Samples':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,6,int(item))
-                start+=1
+        for item in value_list: #This loop go through every items in value_list
+            #print(item)
+            if j==2 or j>4:
+                worksheet.write(start,j,int(item))
+            else:
+                worksheet.write(start,j,item)
+            start +=1
+        j+=1
 
 def write_pldiff(workbook):
     worksheet = workbook.add_worksheet('PLDIFF')
@@ -311,45 +152,18 @@ def write_pldiff(workbook):
     worksheet.write(0,4,'Vector')
     worksheet.write(0,5,'Samples')
 
-
-    for key, value_list in pldiff_data.items():
-        #print(f'Values for the Item {key} are:')
+    j=0 #Set the column number
+    for key, value_list in pldiff_data.items(): #This loop go through every key and the value_list
+        #print(key,value_list)
         start = 1
-        if key == 'Date':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,0,item)
-                start+=1
-
-        if key == 'Cell':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,1,item)
-                start+=1
-
-        if key == 'CHGR':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,2,int(item))
-                start+=1
-                
-        if key == 'PLDIFF':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,3,item)
-                start+=1
-
-        if key == 'Vector':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,4,int(item))
-                start+=1
-
-        if key == 'Samples':
-            for item in value_list:
-                #print(item)
-                worksheet.write(start,5,int(item))
-                start+=1
+        for item in value_list: #This loop go through every items in value_list
+            #print(item)
+            if j==2 or j>3:
+                worksheet.write(start,j,int(item))
+            else:
+                worksheet.write(start,j,item)
+            start +=1
+        j+=1
 
 def wrightInToExcel():
     workbook = xlsxwriter.Workbook(output_path+'/'+'MRR.xlsx')
